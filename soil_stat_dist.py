@@ -1,4 +1,5 @@
 #importing the libraries 
+import pandas as pd 
 import geopandas as gpd
 import rasterio as rio
 from rasterstats import zonal_stats
@@ -74,5 +75,237 @@ def soil_property_calc (raster_list, geo_df):
     return geo_df 
 
 gdf_sp = soil_property_calc(file_list , new_gdf)
+
+def classify_domain_nutrients(selected_palika):
+    for index, row in selected_palika.iterrows():
+        domain = row['Domain']
+        pH = row['pH']
+        TN_percent = row['TN%']
+        P2O5_kg_ha = row['P2O5_kg/ha']
+        K2O_kg_ha = row['K2O_kg/ha']
+        OM_percent = row['OM%']
+        Zinc_ppm = row['Zinc(ppm)']
+        Boron_ppm = row['Boron(ppm)']
+        Sand_percent = row['Sand%']
+        Slit_percent = row['Slit%']
+        Clay_percent = row['Clay%']
+
+        # Initialize new columns for ratings
+        selected_palika.at[index, 'pH_rating'] = None
+        selected_palika.at[index, 'OM_rating'] = None
+        selected_palika.at[index, 'TN_rating'] = None
+        selected_palika.at[index, 'P2O5_rating'] = None
+        selected_palika.at[index, 'K2O_rating'] = None
+        selected_palika.at[index, 'Boron_rating'] = None
+        selected_palika.at[index, 'Zinc_rating'] = None
+
+        # Classification of pH and its rating
+        if 0.0 < pH <= 4.0:
+            selected_palika.at[index, 'pH_rating'] = 'Very High acidic'
+        elif 4.0 < pH <= 5.5:
+            selected_palika.at[index, 'pH_rating'] = 'High Acidic'
+        elif 5.5 < pH <= 6.0:
+            selected_palika.at[index, 'pH_rating'] = 'Medium Acidic'
+        elif 6.0 < pH <= 6.5:
+            selected_palika.at[index, 'pH_rating'] = 'Low Acidic'
+        elif 6.5 < pH <= 7.5:
+            selected_palika.at[index, 'pH_rating'] = 'Neutral'
+        elif 7.5 < pH <= 8.0:
+            selected_palika.at[index, 'pH_rating'] = 'Low Alkaline'
+        elif 8.0 < pH <= 8.5:
+            selected_palika.at[index, 'pH_rating'] = 'Low Alkaline'
+        elif 8.5 < pH <= 10.0:
+            selected_palika.at[index, 'pH_rating'] = 'Very High Alkaline'
+
+        # Classification of Organic Matter (OM %)
+        if domain == 'Hill':
+            if OM_percent < 0.75:
+                selected_palika.at[index, 'OM_rating'] = 'Very low'
+            elif 0.75 <= OM_percent < 1.5:
+                selected_palika.at[index, 'OM_rating'] = 'Low'
+            elif 1.5 <= OM_percent < 3.0:
+                selected_palika.at[index, 'OM_rating'] = 'Medium'
+            elif 3.0 <= OM_percent < 5.0:
+                selected_palika.at[index, 'OM_rating'] = 'High'
+            else:
+                selected_palika.at[index, 'OM_rating'] = 'Very High'
+
+            # Classification of Total Nitrogen (TN %)
+            if TN_percent < 0.03:
+                selected_palika.at[index, 'TN_rating'] = 'Very low'
+            elif 0.03 <= TN_percent < 0.07:
+                selected_palika.at[index, 'TN_rating'] = 'Low'
+            elif 0.07 <= TN_percent < 0.15:
+                selected_palika.at[index, 'TN_rating'] = 'Medium'
+            elif 0.15 <= TN_percent < 0.25:
+                selected_palika.at[index, 'TN_rating'] = 'High'
+            else:
+                selected_palika.at[index, 'TN_rating'] = 'Very High'
+
+            # Classification of P2O5 kg/ha
+            if P2O5_kg_ha < 11.2:
+                selected_palika.at[index, 'P2O5_rating'] = 'Very low'
+            elif 11.2 <= P2O5_kg_ha < 28:
+                selected_palika.at[index, 'P2O5_rating'] = 'Low'
+            elif 28 <= P2O5_kg_ha < 56:
+                selected_palika.at[index, 'P2O5_rating'] = 'Medium'
+            elif 56 <= P2O5_kg_ha < 112:
+                selected_palika.at[index, 'P2O5_rating'] = 'High'
+            else:
+                selected_palika.at[index, 'P2O5_rating'] = 'Very High'
+
+            # Classification of K2O kg/ha
+            if K2O_kg_ha < 55:
+                selected_palika.at[index, 'K2O_rating'] = 'Very low'
+            elif 55 <= K2O_kg_ha < 110:
+                selected_palika.at[index, 'K2O_rating'] = 'Low'
+            elif 110 <= K2O_kg_ha < 280:
+                selected_palika.at[index, 'K2O_rating'] = 'Medium'
+            elif 280 <= K2O_kg_ha < 500:
+                selected_palika.at[index, 'K2O_rating'] = 'High'
+            else:
+                selected_palika.at[index, 'K2O_rating'] = 'Very High'
+
+            # Classification of Boron (ppm)
+            if Boron_ppm < 0.4:
+                selected_palika.at[index, 'Boron_rating'] = 'Very low'
+            elif 0.4 <= Boron_ppm < 0.7:
+                selected_palika.at[index, 'Boron_rating'] = 'Low'
+            elif 0.7 <= Boron_ppm < 1.2:
+                selected_palika.at[index, 'Boron_rating'] = 'Medium'
+            elif 1.2 <= Boron_ppm < 2.0:
+                selected_palika.at[index, 'Boron_rating'] = 'High'
+            else:
+                selected_palika.at[index, 'Boron_rating'] = 'Very High'
+
+            # Classification of Zinc (ppm)
+            if Zinc_ppm < 0.5:
+                selected_palika.at[index, 'Zinc_rating'] = 'Very low'
+            elif 0.5 <= Zinc_ppm < 1.0:
+                selected_palika.at[index, 'Zinc_rating'] = 'Low'
+            elif 1.0 <= Zinc_ppm < 3.0:
+                selected_palika.at[index, 'Zinc_rating'] = 'Medium'
+            elif 3.0 <= Zinc_ppm < 6.0:
+                selected_palika.at[index, 'Zinc_rating'] = 'High'
+            else:
+                selected_palika.at[index, 'Zinc_rating'] = 'Very High'
+
+        elif domain == 'Terai':
+            # Classification of Organic Matter (OM %)
+            if OM_percent < 1.0:
+                selected_palika.at[index, 'OM_rating'] = 'Very low'
+            elif 1.0 <= OM_percent < 2.5:
+                selected_palika.at[index, 'OM_rating'] = 'Low'
+            elif 2.5 <= OM_percent < 5.0:
+                selected_palika.at[index, 'OM_rating'] = 'Medium'
+            elif 5.0 <= OM_percent < 10.0:
+                selected_palika.at[index, 'OM_rating'] = 'High'
+            else:
+                selected_palika.at[index, 'OM_rating'] = 'Very High'
+
+            # Classification of Total Nitrogen (TN %)
+            if TN_percent < 0.05:
+                selected_palika.at[index, 'TN_rating'] = 'Very low'
+            elif 0.05 <= TN_percent < 0.1:
+                selected_palika.at[index, 'TN_rating'] = 'Low'
+            elif 0.1 <= TN_percent < 0.2:
+                selected_palika.at[index, 'TN_rating'] = 'Medium'
+            elif 0.2 <= TN_percent < 0.4:
+                selected_palika.at[index, 'TN_rating'] = 'High'
+            else:
+                selected_palika.at[index, 'TN_rating'] = 'Very High'
+
+            # Classification of P2O5 kg/ha
+            if P2O5_kg_ha < 10:
+                selected_palika.at[index, 'P2O5_rating'] = 'Very low'
+            elif 10 <= P2O5_kg_ha < 30:
+                selected_palika.at[index, 'P2O5_rating'] = 'Low'
+            elif 30 <= P2O5_kg_ha < 55:
+                selected_palika.at[index, 'P2O5_rating'] = 'Medium'
+            elif 55 <= P2O5_kg_ha < 110:
+                selected_palika.at[index, 'P2O5_rating'] = 'High'
+            else:
+                selected_palika.at[index, 'P2O5_rating'] = 'Very High'
+
+            # Classification of K2O kg/ha
+            if K2O_kg_ha < 56:
+                selected_palika.at[index, 'K2O_rating'] = 'Very low'
+            elif 56 <= K2O_kg_ha < 112:
+                selected_palika.at[index, 'K2O_rating'] = 'Low'
+            elif 112 <= K2O_kg_ha < 280:
+                selected_palika.at[index, 'K2O_rating'] = 'Medium'
+            elif 280 <= K2O_kg_ha < 504:
+                selected_palika.at[index, 'K2O_rating'] = 'High'
+            else:
+                selected_palika.at[index, 'K2O_rating'] = 'Very High'
+
+            # Classification of Boron (ppm)
+            if Boron_ppm < 0.4:
+                selected_palika.at[index, 'Boron_rating'] = 'Very low'
+            elif 0.4 <= Boron_ppm < 0.7:
+                selected_palika.at[index, 'Boron_rating'] = 'Low'
+            elif 0.7 <= Boron_ppm < 1.2:
+                selected_palika.at[index, 'Boron_rating'] = 'Medium'
+            elif 1.2 <= Boron_ppm < 2.0:
+                selected_palika.at[index, 'Boron_rating'] = 'High'
+            else:
+                selected_palika.at[index, 'Boron_rating'] = 'Very High'
+
+            # Classification of Zinc (ppm)
+            if Zinc_ppm < 0.5:
+                selected_palika.at[index, 'Zinc_rating'] = 'Very low'
+            elif 0.5 <= Zinc_ppm < 1.0:
+                selected_palika.at[index, 'Zinc_rating'] = 'Low'
+            elif 1.0 <= Zinc_ppm < 3.0:
+                selected_palika.at[index, 'Zinc_rating'] = 'Medium'
+            elif 3.0 <= Zinc_ppm < 6.0:
+                selected_palika.at[index, 'Zinc_rating'] = 'High'
+            else:
+                selected_palika.at[index, 'Zinc_rating'] = 'Very High'
+
+    return selected_palika
+
+# give the dataframe argument to the function 
+classify_domain_nutrients(gdf_sp)
+
+# Define the full set of categories and corresponding colors 
+
+categories = ['Very Low', 'Low', 'Medium','High', 'Very High']
+
+rating_colors = {
+    'Very Low' : '#FF0000', 
+    'Low': '#FF6666', 
+    'Medium':'#FFFFFF',
+    'High': '#66FF66', 
+    'Very High': '#008000'
+}
+
+#Create a ListedColormap from the colors and categories 
+
+cmap = mcolors.ListedColormap([rating_colors[cat] for cat in categories])
+
+# List of properties to plot 
+properties = ['TN_rating', 'P2O5_rating','K2O_rating']
+
+#create subplots 
+fig , axes = plt.subplots(nrows = 3, ncols = 1, figsize = (20,15) )
+
+for ax, prop in zip ( axes.flatten(), properties): 
+    gdf_sp.plot (
+    column = prop,
+    legend = True,
+    # legend_kwds={'labels': categories, 'loc': 'lower left', 'fontsize': 10},   
+    cmap = cmap, 
+    ax  = ax 
+    )
+    ax.set_title(f"{prop.replace('_', ' ')}",  fontsize = 15, pad = 15)
+    nepal_dist.plot(ax = ax, facecolor = "none" , edgecolor = 'black')
+
+# #adjust layout 
+# plt.tight_layout
+
+#show plot 
+plt.show()
+
 
 
