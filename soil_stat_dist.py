@@ -307,5 +307,10 @@ for ax, prop in zip ( axes.flatten(), properties):
 #show plot 
 plt.show()
 
+# Drop the geometry column
+nepal_dist_no_geom = nepal_dist.drop(columns='geometry')
+
+# Export to CSV
+nepal_dist_no_geom.to_csv('DSM_nutrient_supply.csv', index=False)
 
 

@@ -1,0 +1,78 @@
+DISTRICT,Domain,Sub_domain,pH,TN%,P2O5_kg/ha,K2O_kg/ha,OM%,Zinc(ppm),Boron(ppm),Sand%,Slit%,Clay%,pH_rating,OM_rating,TN_rating,P2O5_rating,K2O_rating,Boron_rating,Zinc_rating
+MUGU,Hill,Hill,7.01,0.24,144.6,538.8,4.46,2.01,0.48,53.45,34.87,12.13,Neutral,High,High,Very High,Very High,Low,Medium
+UDAYAPUR,Hill,Hill,6.41,0.13,72.14,366.29,2.7,1.34,0.85,52.64,30.97,18.88,Low Acidic,Medium,Medium,High,High,Medium,Medium
+SURKHET,Terai,Inner_terai,6.67,0.17,108.57,410.75,3.4,1.04,1.19,46.34,37.75,17.51,Neutral,Medium,Medium,High,High,Medium,Medium
+MAHOTTARI,Terai,Central_terai,6.27,0.1,40.72,108.3,1.7,0.58,0.59,51.26,32.4,16.65,Low Acidic,Low,Medium,Medium,Low,Low,Low
+KAPILBASTU,Terai,Hill,6.99,0.1,46.9,162.87,2.12,0.42,5.33,33.89,48.38,25.94,Neutral,Low,Medium,Medium,Medium,Very High,Very low
+DADELDHURA,Hill,Hill,6.52,0.16,118.87,439.46,3.56,1.65,1.06,58.39,26.68,16.89,Neutral,High,High,Very High,High,Medium,Medium
+JAJARKOT,Hill,Hill,6.33,0.17,173.85,499.57,3.63,1.75,0.88,52.11,34.27,11.08,Low Acidic,High,High,Very High,High,Medium,Medium
+DOLAKHA,Hill,Hill,6.19,0.14,215.21,473.33,5.49,2.78,1.06,53.18,34.43,9.06,Low Acidic,Very High,Medium,Very High,High,Medium,Medium
+RUKUM_W,Hill,Hill,6.37,0.15,176.62,474.6,3.46,1.77,0.76,56.35,30.01,10.42,Low Acidic,High,High,Very High,High,Medium,Medium
+RAMECHHAP,Hill,Hill,6.11,0.1,126.89,398.73,3.94,2.38,0.99,53.98,34.04,12.84,Low Acidic,High,Medium,Very High,High,Medium,Medium
+HUMLA,Hill,Hill,7.09,0.25,163.81,584.54,4.66,2.35,0.61,52.39,36.3,13.66,Neutral,High,Very High,Very High,Very High,Low,Medium
+DHANKUTA,Hill,Hill,6.44,0.15,59.46,467.54,2.93,1.49,0.93,60.02,17.85,22.37,Low Acidic,Medium,High,High,High,Medium,Medium
+TANAHU,Hill,Hill,6.13,0.15,67.25,275.47,3.06,1.67,1.21,43.46,42.51,14.21,Low Acidic,High,High,High,Medium,High,Medium
+BARDIYA,Terai,Farwest_terai,7.01,0.12,85.44,219.39,2.33,0.81,1.3,41.94,38.44,19.79,Neutral,Low,Medium,High,Medium,High,Low
+SALYAN,Hill,Hill,6.56,0.13,166.05,399.2,2.87,1,0.98,48.38,34.99,16.85,Neutral,Medium,Medium,Very High,High,Medium,Medium
+MORANG,Terai,Eastern_terai,6.32,0.12,57.39,269.91,2.36,0.65,0.75,39.05,47.98,13.77,Low Acidic,Low,Medium,High,Medium,Medium,Low
+LALITPUR,Hill,Hill,5.92,0.14,106.92,374.89,3.08,1.85,0.99,69.62,25.45,12.25,Medium Acidic,High,Medium,High,High,Medium,Medium
+ROLPA,Hill,Hill,6.5,0.08,177.54,507.17,2.52,2,0.76,44.41,38.61,17.12,Low Acidic,Medium,Medium,Very High,Very High,Medium,Medium
+MYAGDI,Hill,Hill,6.42,0.11,247.1,438.44,4.12,3.39,1.26,38.7,54.05,6.95,Low Acidic,High,Medium,Very High,High,High,High
+BANKE,Terai,Farwest_terai,6.95,0.13,95.38,237.81,2.72,0.85,1.35,38.12,36.66,28.8,Neutral,Medium,Medium,High,Medium,High,Low
+DOLPA,Hill,Hill,7.28,0.23,176.55,602.63,4.78,2.28,0.77,53.54,34.83,14.77,Neutral,High,High,Very High,Very High,Medium,Medium
+ACHHAM,Hill,Hill,6.23,0.14,71.16,387.83,3.15,1.22,0.96,50.35,32.23,17.51,Low Acidic,High,Medium,High,High,Medium,Medium
+BHAKTAPUR,Hill,Hill,5.8,0.11,267,352.78,2.14,1.67,0.88,57.92,31.28,15.85,Medium Acidic,Medium,Medium,Very High,High,Medium,Medium
+PANCHTHAR,Hill,Hill,6.17,0.16,106.8,367.38,3.29,1.67,1.65,60.26,25.47,16.06,Low Acidic,High,High,High,High,High,Medium
+SIRAHA,Terai,Central_terai,6.73,0.09,28.55,144.91,1.13,0.77,0.49,47.27,36.14,16.94,Neutral,Low,Low,Low,Medium,Low,Low
+MUSTANG,Hill,Hill,7.7,0.22,174.52,648.07,4.8,2.55,1.06,53.11,36.11,16.41,Low Alkaline,High,High,Very High,Very High,Medium,Medium
+PARSA,Terai,Central_terai,6.24,0.11,49.45,165.09,2.1,0.76,1.23,47.79,37.19,14.81,Low Acidic,Low,Medium,Medium,Medium,High,Low
+TERHATHUM,Hill,Hill,6.17,0.15,83.11,310.76,3.11,1.32,1,57.51,28.36,14.99,Low Acidic,High,High,High,High,Medium,Medium
+KANCHANPUR,Terai,Farwest_terai,7.28,0.1,74.07,248.13,2.16,1.08,0.65,37.92,36.84,28.86,Neutral,Low,Medium,High,Medium,Low,Medium
+GULMI,Hill,Hill,6.52,0.14,161.8,243.28,3.25,1.98,0.86,44.85,44.81,10.38,Neutral,High,Medium,Very High,Medium,Medium,Medium
+SUNSARI,Terai,Eastern_terai,6.41,0.1,62.42,267.11,2.04,1.09,0.7,36.72,41.28,17.67,Low Acidic,Low,Medium,High,Medium,Medium,Medium
+SINDHUPALCHOK,Hill,Hill,6.06,0.13,212.84,410.85,4.77,2.78,1.07,47.88,37.71,9.6,Low Acidic,High,Medium,Very High,High,Medium,Medium
+BHOJPUR,Hill,Hill,6.19,0.15,96.56,347.73,3.6,1.77,0.95,59.31,26.58,15.63,Low Acidic,High,High,High,High,Medium,Medium
+KASKI,Hill,Hill,6.27,0.15,123.07,301.66,3.43,3.44,1.3,44.44,45.14,10.89,Low Acidic,High,High,Very High,High,High,High
+KATHMANDU,Hill,Hill,5.93,0.13,218.36,394.23,2.7,1.75,0.95,53.56,33.29,14.53,Medium Acidic,Medium,Medium,Very High,High,Medium,Medium
+SYANGJA,Hill,Hill,6.37,0.12,62.33,208.1,2.68,1.58,0.91,36.7,50.2,14.13,Low Acidic,Medium,Medium,High,Medium,Medium,Medium
+CHITAWAN,Terai,Western_terai,6.18,0.14,82.03,265.82,2.79,1.4,1.33,49.66,33.37,15.01,Low Acidic,Medium,Medium,High,Medium,High,Medium
+PYUTHAN,Hill,Hill,6.68,0.09,160.52,466.61,2.83,1.76,0.83,45.15,40.73,8.18,Neutral,Medium,Medium,Very High,High,Medium,Medium
+NUWAKOT,Hill,Hill,5.92,0.13,142.17,371.14,3.2,2.05,1.27,46.85,38.49,14.46,Medium Acidic,High,Medium,Very High,High,High,Medium
+BAITADI,Hill,Hill,6.63,0.08,121.5,582.49,4.63,1.54,0.94,40.61,47.11,12.23,Neutral,High,Medium,Very High,Very High,Medium,Medium
+JUMLA,Hill,Hill,6.31,0.21,102.83,539.17,4.59,1.73,0.54,57.43,31.58,9.65,Low Acidic,High,High,High,Very High,Low,Medium
+DAILEKH,Hill,Hill,6.27,0.13,114.6,440.63,3.25,1.15,1.03,53.98,30.78,15.88,Low Acidic,High,Medium,Very High,High,Medium,Medium
+DHANUSHA,Terai,Central_terai,6.44,0.08,39.43,136.24,1.3,0.85,0.56,45.78,37.57,17.32,Low Acidic,Low,Low,Medium,Medium,Low,Low
+DARCHULA,Hill,Hill,6.8,0.25,133.22,471.34,5.61,2.62,1.08,49.35,40.43,10.11,Neutral,Very High,Very High,Very High,High,Medium,Medium
+JHAPA,Terai,Eastern_terai,5.64,0.12,61.15,195.6,2.55,0.6,1.87,41.16,41.41,17.91,Medium Acidic,Medium,Medium,High,Medium,High,Low
+TAPLEJUNG,Hill,Hill,6.22,0.15,191.09,433.81,5.33,3.44,1.28,59.46,30.83,9.31,Low Acidic,Very High,High,Very High,High,High,High
+ARGHAKHANCHI,Hill,Hill,6.38,0.11,94.13,306.88,3.15,1.53,0.88,61.79,28.07,10.53,Low Acidic,High,Medium,High,High,Medium,Medium
+PALPA,Hill,Hill,6.57,0.15,47,226.32,3.12,1.54,1.01,47.13,38.57,15.5,Neutral,High,High,Medium,Medium,Medium,Medium
+RAUTAHAT,Terai,Central_terai,6.97,0.1,49.26,176.62,1.89,0.56,0.55,45.22,33.26,22.34,Neutral,Low,Medium,Medium,Medium,Low,Low
+BAJURA,Hill,Hill,6.56,0.22,97.66,516.06,4.69,1.98,0.61,56.16,34.36,9.56,Neutral,High,High,High,Very High,Low,Medium
+SOLUKHUMBU,Hill,Hill,6.33,0.14,209.95,501.67,6.16,3.52,1.37,56.44,32.86,9.63,Low Acidic,Very High,Medium,Very High,Very High,High,High
+SINDHULI,Hill,Hill,6.3,0.13,71.53,310.88,2.82,1.65,0.91,53.49,31.58,15.36,Low Acidic,Medium,Medium,High,High,Medium,Medium
+DHADING,Hill,Hill,6.07,0.14,130.15,383.52,3.19,1.98,1.42,45.41,39.97,14.21,Low Acidic,High,Medium,Very High,High,High,Medium
+NAWALPARASI_W,Terai,Western_terai,7.18,0.09,43.85,133.39,1.93,1.23,1.26,41.4,35.73,19.71,Neutral,Low,Low,Medium,Medium,High,Medium
+KAILALI,Terai,Farwest_terai,7.03,0.13,79.63,256.34,2.58,0.92,1.38,41.37,39.67,18.08,Neutral,Medium,Medium,High,Medium,High,Low
+RASUWA,Hill,Hill,6.32,0.15,243.05,506.08,4.98,2.83,1.44,44.57,41.1,8.33,Low Acidic,High,High,Very High,Very High,High,Medium
+KHOTANG,Hill,Hill,6.18,0.14,92.01,382.31,3.42,1.77,0.9,58.93,26.87,15.86,Low Acidic,High,Medium,High,High,Medium,Medium
+LAMJUNG,Hill,Hill,6.11,0.16,136.82,305.9,3.57,3.06,1.2,44.86,43.86,10.75,Low Acidic,High,High,Very High,High,High,High
+SARLAHI,Terai,Central_terai,6.68,0.12,46.77,208.47,2.04,0.55,0.58,48.41,38.5,14.54,Neutral,Low,Medium,Medium,Medium,Low,Low
+BAGLUNG,Hill,Hill,6.1,0.11,195.64,368.24,2.83,2.31,0.83,37.09,51.61,10.58,Low Acidic,Medium,Medium,Very High,High,Medium,Medium
+KALIKOT,Hill,Hill,6.38,0.15,78.06,524.26,3.45,1.61,0.78,62.72,28.89,9.3,Low Acidic,High,High,High,Very High,Medium,Medium
+GORKHA,Hill,Hill,6.28,0.17,169.97,424.6,4.23,2.67,1.37,45.2,41.99,10.95,Low Acidic,High,High,Very High,High,High,Medium
+NAWALPARASI_E,Terai,Western_terai,6.27,0.13,48.27,197.45,2.61,1.35,1.18,49.5,32.78,14.94,Low Acidic,Medium,Medium,Medium,Medium,Medium,Medium
+RUKUM_E,Hill,Hill,6.4,0.13,250.56,559.31,3.96,2.29,1.17,50.71,37.23,6.18,Low Acidic,High,Medium,Very High,Very High,Medium,Medium
+RUPANDEHI,Terai,Western_terai,6.7,0.1,67.45,116.26,1.96,3.94,1.08,37.35,47.51,16.46,Neutral,Low,Medium,High,Medium,Medium,High
+OKHALDHUNGA,Hill,Hill,6.08,0.12,99.53,362.55,3.67,1.97,0.89,57.02,30.6,13.5,Low Acidic,High,Medium,High,High,Medium,Medium
+DOTI,Hill,Hill,6.39,0.15,93.47,397.59,3.33,1.59,0.99,52.12,32.2,16.67,Low Acidic,High,High,High,High,Medium,Medium
+SANKHUWASABHA,Hill,Hill,6.19,0.14,177.32,403.6,5.01,3.33,1.16,59.71,30.16,10.38,Low Acidic,Very High,Medium,Very High,High,Medium,High
+SAPTARI,Terai,Central_terai,6.19,0.08,46.29,185.46,1.41,1.27,0.75,40.75,39.33,20.54,Low Acidic,Low,Low,Medium,Medium,Medium,Medium
+BAJHANG,Hill,Hill,6.66,0.24,119.47,476.07,5.42,2.54,0.89,49.87,39.43,10.16,Neutral,Very High,High,Very High,High,Medium,Medium
+BARA,Terai,Central_terai,6.82,0.11,56.12,210.04,2.28,0.99,1.45,43.25,37.27,19.39,Neutral,Low,Medium,High,Medium,High,Low
+KABHREPALANCHOK,Hill,Hill,6.12,0.1,60.9,306.65,2.49,1.71,0.96,54.62,33.12,14.33,Low Acidic,Medium,Medium,High,High,Medium,Medium
+PARBAT,Hill,Hill,6,0.15,88.15,244.32,3.19,2.17,0.73,42.03,46.07,12.02,Medium Acidic,High,High,High,Medium,Medium,Medium
+MAKAWANPUR,Hill,Hill,5.94,0.14,105.31,299.17,2.8,1.49,0.98,52.9,31.83,14.4,Medium Acidic,Medium,Medium,High,High,Medium,Medium
+MANANG,Hill,Hill,6.89,0.2,238.42,532.93,5.54,3.26,1.42,49.39,41.03,9.18,Neutral,Very High,High,Very High,Very High,High,High
+DANG,Terai,Inner_terai,6.91,0.12,123.09,431.71,2.78,1,1.98,45.18,35.46,20.68,Neutral,Medium,Medium,Very High,High,High,Medium
+ILAM,Hill,Hill,5.88,0.18,136.19,344.72,3.67,2.15,2.05,54.57,28.9,16.32,Medium Acidic,High,High,Very High,High,Very High,Medium
